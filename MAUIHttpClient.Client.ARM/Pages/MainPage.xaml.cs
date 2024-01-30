@@ -1,21 +1,27 @@
-﻿using System.Net.Http.Json;
+﻿using MAUIHttpClient.Client.ARM.Services;
+using System.Net.Http.Json;
 
 namespace MAUIHttpClient.Client.ARM.Pages
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        private readonly IHttpClientFactory httpClientFactory;
+
+        public MainPage(IHttpClientFactory httpClientFactory)
         {
             InitializeComponent();
+            this.httpClientFactory = httpClientFactory;
         }
 
-        private async void OnAPIButtonClicked(object sender, EventArgs e)
+        private async void OnAPIHttpsButtonClicked(object sender, EventArgs e)
         {
-            var httpClient = new HttpClient();
-            // since localhost doesnot work on android change it to http
-            var url = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5266" : "http://localhost:5266";
-            var response = await httpClient.GetAsync($"{url}/WeatherForecast");
-            var data = await response.Content.ReadAsStringAsync();
+            var httpClient = this.httpClientFactory.CreateClient("default-maui-api");
+            var response = await httpClient.GetAsync("/WeatherForecast");
+            if(response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                ResultDataLabel.Text = content.ToString();
+            }
         }
     }
 

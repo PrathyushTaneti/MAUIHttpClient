@@ -2,17 +2,19 @@
 <ContentPage
     x:Class="MAUIHttpClient.Client.ARM.Pages.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="API Calls - HTTP HTTPS"
+    Shell.BackgroundColor="{DynamicResource Gray100}"
+    Shell.NavBarHasShadow="True">
     <ScrollView>
         <VerticalStackLayout Padding="30" Spacing="25">
             <Button
-                x:Name="CounterBtn"
-                Clicked="OnAPIButtonClicked"
+                Clicked="OnAPIHttpsButtonClicked"
+                CornerRadius="0"
                 HorizontalOptions="Fill"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Text="Call API" />
+                Text="Call API - HTTPS" />
+            <Label x:Name="ResultDataLabel" Padding="30" />
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

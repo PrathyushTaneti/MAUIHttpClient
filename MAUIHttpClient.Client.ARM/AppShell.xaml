@@ -3,13 +3,13 @@
     x:Class="MAUIHttpClient.Client.ARM.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MAUIHttpClient.Client.ARM"
-    Shell.FlyoutBehavior="Disabled"
-    Title="MAUIHttpClient.Client.ARM">
+    xmlns:pages="clr-namespace:MAUIHttpClient.Client.ARM.Pages"
+    Title="MAUIHttpClient.Client.ARM"
+    Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate pages:MainPage}"
         Route="MainPage" />
 
 </Shell>

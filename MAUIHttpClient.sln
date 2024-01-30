@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{0751F181-A9AE-4CA1-8ADF-A86C4478B477}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{2C4FAF3E-B73C-4928-A39E-CC5E600A5FBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAUIHttpClient.Services.API", "MAUIHttpClient.Services.API\MAUIHttpClient.Services.API.csproj", "{877E9DD1-A7D3-4D27-A9FD-D121A3105ABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAUIHttpClient.Client.ARM", "MAUIHttpClient.Client.ARM\MAUIHttpClient.Client.ARM.csproj", "{50391EA7-517D-4B16-93E5-7EDE67CF7053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{877E9DD1-A7D3-4D27-A9FD-D121A3105ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877E9DD1-A7D3-4D27-A9FD-D121A3105ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877E9DD1-A7D3-4D27-A9FD-D121A3105ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877E9DD1-A7D3-4D27-A9FD-D121A3105ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50391EA7-517D-4B16-93E5-7EDE67CF7053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50391EA7-517D-4B16-93E5-7EDE67CF7053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50391EA7-517D-4B16-93E5-7EDE67CF7053}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{50391EA7-517D-4B16-93E5-7EDE67CF7053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50391EA7-517D-4B16-93E5-7EDE67CF7053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50391EA7-517D-4B16-93E5-7EDE67CF7053}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{877E9DD1-A7D3-4D27-A9FD-D121A3105ABC} = {2C4FAF3E-B73C-4928-A39E-CC5E600A5FBA}
+		{50391EA7-517D-4B16-93E5-7EDE67CF7053} = {0751F181-A9AE-4CA1-8ADF-A86C4478B477}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DFCAE6B-341D-4D64-9120-A2F1F3AC5F9A}
+	EndGlobalSection
+EndGlobal
